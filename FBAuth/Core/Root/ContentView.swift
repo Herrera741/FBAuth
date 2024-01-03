@@ -13,7 +13,6 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            // user already logged in
             if viewModel.userSession != nil {
                 ProfileView()
             } else {

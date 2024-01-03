@@ -29,7 +29,7 @@ struct InputView: View {
             }
             
             Divider()
-        }
+        } // end VStack
     }
 }
 

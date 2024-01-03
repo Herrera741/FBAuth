@@ -16,7 +16,6 @@ struct LoginView: View {
         NavigationStack {
             GeometryReader { geo in
                 VStack {
-                    // image
                     Image(systemName: "message.fill")
                         .resizable()
                         .scaledToFill()
@@ -24,7 +23,6 @@ struct LoginView: View {
                         .foregroundStyle(.green)
                         .padding(.vertical, 30)
                     
-                    // form fields
                     VStack(spacing: 25) {
                         InputView(text: $email,
                                   title: "Email Address",
@@ -39,7 +37,6 @@ struct LoginView: View {
                     .padding(.horizontal)
                     .padding(.top, 15)
                     
-                    // signin button
                     Button {
                         Task {
                             try await viewModel.signIn(withEmail: email, password: password)
@@ -63,7 +60,6 @@ struct LoginView: View {
                     
                     Spacer()
                     
-                    // signup button
                     NavigationLink {
                         RegistrationView()
                             .toolbar(.hidden, for: .navigationBar)

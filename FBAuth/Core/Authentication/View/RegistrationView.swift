@@ -98,7 +98,6 @@ struct RegistrationView: View {
 
 extension RegistrationView: AuthenticationFormProtocol {
     var formIsValid: Bool {
-        // check if email is not empty, has '@' symbol
         return !email.isEmpty
         && email.contains("@")
         && !fullname.isEmpty
